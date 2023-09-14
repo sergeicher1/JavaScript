@@ -1,0 +1,127 @@
+<!-- Define variables: var and let 
+    The difference between let and var is in the scope of the variables they create: 
+    Variables declared by let are only available inside the block where they're defined.
+     Variables declared by var are available throughout the function in which they're declared-->
+<!-- var username; -->
+
+<!-- let username; -->
+
+<!-- List of reserved words in JavaScript:  
+    await, break, case, catch, class, const, continue,
+     debugger, default, delete, do, else, enum, export, 
+     extends, false, finally, for, function, if, import,
+      in, instanceof, new, null, return, super, switch, this,
+       throw, true, try, typeof, var, void, while, with, yield -->
+
+<!-- There are not many such global objects, except console these are also window, document, location, screen, close, open, frames. -->
+
+<!-- Assigning the value to variable-->
+
+<!--
+    var username;
+    username = "Tom";
+-->
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>google.com</title>
+</head>
+<body>
+    <script>
+        let username;           // Define the var username
+        username = "Tom";       // Assign the value to var
+        console.log(username);  // Print the var to console
+    </script>
+</body>
+</html> -->
+
+<!-- Constants
+The const keyword can be used to define a constant , which, like a variable, holds a value, but the value cannot be changed.
+
+
+const username = "Tom"; -->
+
+
+
+<!-- Interpolation Using slash quotes allows us to use a technique called interpolation - embedding data into a string. For example: -->
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>google.com</title>
+  </head>
+  <body>
+    <script>
+      const user = "Tom";
+      const text = `Name: ${user}`;
+      console.log(text); // Name: Tom
+    </script>
+  </body>
+</html> -->
+<!--You can embed more data in a similar way:
+const user = "Tom";
+const age = 37;
+const isMarried = false;
+const text = `Name: ${user}   Age: ${age}   IsMarried: ${isMarried}`;
+console.log(text);  // Name: Tom   Age: 37   IsMarried: false
+-->
+
+<!--
+    In addition to interpolation, slash quotes allow you to define multi-line text:
+const text = 
+`We all learned a little
+Something and somehow
+So upbringing, thank God,
+It's easy for us to shine.`;
+ 
+console.log(text);
+-->
+
+<!--
+  object
+The type objectrepresents a complex object. The simplest definition of an object is curly braces:
+const user = {};
+An object can have various properties and methods:
+const user = {name: "Tom", age:24};
+console.log(user.name);
+In this case, the object is called user, and it has two properties,
+ name and age, which accept data of other types as values.
+  This is a brief description of objects, we will consider objects in more detail in subsequent articles.
+-->
+
+<!--
+  Weak/dynamic typing
+JavaScript is a weakly and dynamically typed language. This means that variables can dynamically change type. For example:
+
+1
+2
+3
+4
+5
+6
+let id;  // тип undefined
+console.log(id);
+id = 45;  // тип number
+console.log(id);
+id = "45"; // тип string
+console.log(id);
+Despite the fact that in the second and third cases the console will display the number 45, 
+in the second case the variable idwill represent a number, and in the third case it will represent a string.
+
+typeof operator
+Using the typeof operator , you can get the type of a variable, which can be useful when, depending on the type of a variable, you need to perform certain actions:
+let id;
+console.log(typeof id);       // undefined
+ 
+id = 45;
+console.log(typeof id);   // number
+ 
+id = 45n;
+console.log(typeof id);     // bigint
+ 
+id = "45";
+console.log(typeof id);     // string
+It's worth noting that for a null value, the operator typeofreturns "object",
+ even though according to the JavaScript specification, null represents a distinct type.
+-->

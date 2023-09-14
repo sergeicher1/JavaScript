@@ -1,0 +1,152 @@
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>google.com</title>
+  </head>
+  <body>
+    <script>
+      window.alert("Hello World!");
+      var result = confirm("Close the window?");
+      if (result === true) document.write("The window is closed! ");
+      else document.write("The window is not closed! ");
+      var age = prompt("Enter your age: ");
+      document.write("You are " + age + "years old");
+    </script>
+  </body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>google.com</title>
+  </head>
+  <body>
+    <button onclick="openWindow()">Click</button>
+    <script>
+      function openWindow() {
+        window.open("https://microsoft.com", "_blank", "popup=yes");
+      }
+    </script>
+  </body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>google.com</title>
+  </head>
+  <body>
+    <button onclick="openWindow()">Click</button>
+    <script>
+      function openWindow() {
+        const popup = window.open(
+          "https://microsoft.com",
+          "_blank",
+          "popup=yes"
+        );
+        popup.moveTo(800, 800, 1000, 500);
+         setTimeout(() => popup.close(), 5000);
+      }
+    </script>
+  </body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>google.com</title>
+  </head>
+  <body>
+    <button onclick="showHistoryData()">Get history data</button>
+    <script>
+      function showHistoryData() {
+        const popup = window.open(); // show the data inside new window //
+        document.write("В истории " + history.length + " станиц");
+        document.write(
+          "<br/> --------------------------------------------<br/>"
+        );
+        document.write(history);
+        document.write(
+          "<br/> --------------------------------------------<br/>"
+        );
+        for (const prop in history) {
+          document.write(prop, " : ", history[prop]);
+          document.write("<br/>");
+        }
+      }
+      document.write("Строка запроса: " + location.href + "<br />");
+      document.write("Путь к ресурсу: " + location.pathname + "<br />");
+      document.write("Схема: " + location.origin + "<br />");
+      document.write("Протокол: " + location.protocol + "<br />");
+      document.write("Порт: " + location.port + "<br />");
+      document.write("Хост: " + location.host + "<br />");
+      document.write("Имя хоста: " + location.hostname + "<br />");
+      document.write("Хэш: " + location.hash + "<br />");
+      document.write("Поиск: " + location.search + "<br />");
+      document.write(navigator.userAgent + "<br/>");
+      function success(position) {
+        var latitude = position.coords.latitude;
+        var longitude = position.coords.longitude;
+        var altitude = position.coords.altitude;
+        var speed = position.coords.speed;
+
+        document.write("Широта: " + latitude + "<br/>");
+        document.write("Долгота: " + longitude + "<br/>");
+        document.write("Высота: " + altitude + "<br/>");
+        document.write("Скорость перемещения: " + speed + "<br/>");
+      }
+
+      function error(obj) {
+        document.write("Ошибка при определении положения");
+      }
+      navigator.geolocation.getCurrentPosition(success, error);
+
+    </script>
+  </body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+</head>
+<body>
+<div id="time"></div>
+<script>
+function updateTime() {
+    document.getElementById("time").innerHTML = new Date().toTimeString();
+}
+setInterval(updateTime, 1000);
+</script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      #rect {
+        margin: 100px;
+        width: 100px;
+        height: 100px;
+        background: #50c878;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="rect"></div>
+    <script>
+      var square = document.getElementById("rect");
+      var angle = 0;
+      function rotate() {
+        angle = (angle - 20) % 360;
+        square.style.transform = "rotate(" + angle + "deg)";
+        window.requestAnimationFrame(rotate);
+      }
+      var id = window.requestAnimationFrame(rotate);
+     
+    </script>
+  </body>
+</html>

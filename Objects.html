@@ -1,0 +1,145 @@
+<!-- Objects in return of fuctions-->
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>google.com</title>
+  </head>
+  <body style="background-color: bisque">
+    <script>
+      function createUser(pName, pAge) {
+        return {
+          name: pName,
+          age: pAge,
+          displayInfo: function () {
+            document.write(
+              "Name: " + this.name + " Age: " + this.age + "<br/>"
+            );
+          },
+        };
+      }
+      var tom = createUser("Tom", 26);
+      tom.displayInfo();
+      var alice = createUser("Alice", 24);
+      alice.displayInfo();
+    </script>
+  </body>
+</html> -->
+
+<!-- Object constructors-->
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>google.com</title>
+  </head>
+  <body style="background-color: bisque">
+    <script>
+      function User(pName, pAge) {
+        this.name = pName;
+        this.age = pAge;
+        this.displayInfo = function () {
+          document.write(
+            "Имя: " + this.name + "; возраст: " + this.age + "<br/>"
+          );
+        };
+      }
+      var tom = new User("Том", 26);
+      console.log(tom.name); // Том
+      tom.displayInfo();
+      // конструктор типа Car
+      function Car(mName, mYear) {
+        this.name = mName;
+        this.year = mYear;
+        this.getCarInfo = function () {
+          document.write(
+            "Модель: " + this.name + "  Год выпуска: " + this.year + "<br/>"
+          );
+        };
+      }
+      // конструктор типа User
+      function User(pName, pAge) {
+        this.name = pName;
+        this.age = pAge;
+        this.driveCar = function (car) {
+          document.write(this.name + " ведет машину " + car.name + "<br/>");
+        };
+        this.displayInfo = function () {
+          document.write(
+            "Имя: " + this.name + "; возраст: " + this.age + "<br/>"
+          );
+        };
+      }
+
+      var tom = new User("Том", 26);
+      tom.displayInfo();
+      var bently = new Car("Бентли", 2004);
+      tom.driveCar(bently);
+      var tom = new User("Том", 26);
+
+      var isUser = tom instanceof User;
+      var isCar = tom instanceof Car;
+      console.log(isUser); // true
+      console.log(isCar); // false
+    </script>
+  </body>
+</html> -->
+
+<!-- Incapsulation-->
+
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>google.com</title>
+  </head>
+  <body style="background-color: bisque">
+    <script>
+      function User(pName, pAge) {
+        this.name = pName;
+        this.age = pAge;
+        this.displayInfo = function () {
+          document.write("Имя: " + this.name + "; возраст: " + this.age);
+        };
+      }
+      var tom = new User("Том", 26);
+      tom.name = 34;
+      document.write(tom.name);
+    </script>
+  </body>
+</html> -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>google.com</title>
+  </head>
+  <body style="background-color: bisque">
+    <script>
+      function User(name, age) {
+        this.name = name;
+        var _age = age;
+        this.displayInfo = function () {
+          document.write("Имя: " + this.name + "; возраст: " + _age + "<br>");
+        };
+        this.getAge = function () {
+          return _age;
+        };
+        this.setAge = function (age) {
+          if (typeof age === "number" && age > 0 && age < 110) {
+            _age = age;
+          } else {
+            console.log("Недопустимое значение");
+          }
+        };
+      }
+
+      var tom = new User("Том", 26);
+      document.write(tom._age); // undefined - _age - локальная переменная
+      document.write(tom.getAge()); // 26
+      tom.setAge(32);
+      document.write(tom.getAge()); // 32
+      tom.setAge("54"); // Недопустимое значение
+    </script>
+  </body>
+</html>

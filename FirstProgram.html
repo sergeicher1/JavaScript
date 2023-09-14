@@ -1,0 +1,120 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>google.com</title>
+</head>
+<body>
+    <script>
+        document.write("<h2>First Program on JavaScript</h2>");
+    </script>
+</body>
+</html> -->
+<!-- -------------------------------------------------------------------------- -->
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>google.com</title>
+    <script>
+        document.write("Initial text");
+    </script>
+</head>
+<body>
+    <h2>First header</h2>
+    <script>
+        document.write("First text");
+    </script>
+    <h2>Second header</h2>
+    <script>
+        document.write("Second text");
+    </script>
+</body>
+</html> -->
+
+<!-- -------------------------------------------------------------------------- -->
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>google.com</title>
+</head>
+<body>
+    <script>
+        document.write("2 + 5 =  "); const sum = 2 + 5; document.write(sum); 
+    </script>
+</body>
+</html> -->
+
+<!-- -------------------------------------------------------------------------- -->
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>google.com</title>
+</head>
+<body>
+    <script>
+        document.write("2 + 5 =  ")
+        const sum = 2 + 5
+        document.write(sum)
+    </script>
+</body>
+</html> -->
+<!-- -------------------------------------------------------------------------- -->
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>google.com</title>
+</head>
+<body>
+    <script>
+        document.write("Hello! ");
+        {
+            document.write("How are you? ");
+            document.write("Why don't you answer, are you sleeping? ");
+        }
+        document.write("Ok bye...");
+    </script>
+</body>
+</html> -->
+
+<!-- -------------------------------------------------------------------------- -->
+<!-- In the previous article, the javascript code was directly defined on the web page.
+But there is another way to connect JavaScript code,
+which involves placing the code in external
+files and connecting them using the <script> tag -->
+<!--Now let's connect this file to the web page-->
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>google.com</title>
+</head>
+<body>
+    <script src="js/main.js"></script>
+</body>
+</html> -->
+
+<!-- -------------------------------------------------------------------------- -->
+
+
+<!-- The async attribute ensures that HTML processing is not paused whe
+    n the browser encounters a <script> element. The JavaScript file is
+         loaded asynchronously (hence the name of the attribute - async). 
+         In this case, the HTML code continues to be processed until the corresponding 
+         JavaScript file is loaded. When the JavaScript file is loaded, 
+         HTML processing stops and the loaded JS file starts executing.
+          After the JavaScript code has executed, HTML processing continues. -->
+
+          <!-- <script async src="js/main.js"></script> -->
+
+
+          <!-- The defer attribute also ensures that HTML processing is not paused.
+             On the other hand, the JavaScript source code is executed only after
+              the HTML code has been fully processed. 
+              Thus, the execution of the JavaScript code is deferred (hence the name defer). -->
+              	
+<!-- <script defer src="js/main.js"></script> -->

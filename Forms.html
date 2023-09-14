@@ -1,0 +1,127 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+</head>
+<body>
+<form name="search"></form>
+<form name="settings"></form>
+<script>
+var searchForm;
+for (var i = 0; i < document.forms.length; i++) {
+ 
+    if(document.forms[i].name==="search")
+        searchForm = document.forms[i];
+}
+document.write(searchForm.name);
+</script>
+</body>
+</html>
+ -->
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <form name="search">
+        <input type="text" name="key"></input>
+        <input type="submit" name="send"></input>
+    </form>
+    <script>
+    var searchForm = document.forms["search"];
+    for(var i=0; i<searchForm.elements.length;i++)
+        document.write(searchForm.elements[i].name + "<br/>");
+    </script>
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <form name="search">
+    <input type="text" name="key" value="hello world"></input>
+    <input type="submit" name="send"></input>
+</form>
+<script>
+var searchForm = document.forms["search"];
+// выведем имя всех элементов
+for(var i=0; i<searchForm.elements.length;i++)
+    document.write(searchForm.elements[i].name + "<br/>");
+     
+// получим по имени текстовое поле
+var keyBox = searchForm.elements["key"];
+keyBox.focus(); // focuses on form/element
+document.write(keyBox.name); // key
+</script>
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+</head>
+<body>
+<form name="search">
+    <input type="text" name="key"></input>
+    <input type="submit" name="send" value="Отправить" />
+</form>
+<script>
+function sendForm(e){
+     
+    // получаем значение поля key
+    var keyBox = document.search.key;
+    var val = keyBox.value;
+    if(val.length>5){
+        alert("Недопустимая длина строки");
+        e.preventDefault();
+    }   
+    else
+        alert("Отправка разрешена");
+}
+ 
+var sendButton = document.search.send;
+sendButton.addEventListener("click", sendForm);
+</script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+</head>
+<body>
+<form name="search">
+    <input type="text" name="key" placeholder="Введите ключ"></input>
+    <input type="button" name="print" value="Печать" />
+</form>
+<div id="printBlock"></div>
+<script>
+function printForm(e){
+     
+    // получаем значение поля key
+    var keyBox = document.search.key;
+    var val = keyBox.value;
+    // получаем элемент printBlock
+    var printBlock = document.getElementById("printBlock");
+    // создаем новый параграф
+    var pElement = document.createElement("p");
+    // устанавливаем у него текст
+    pElement.textContent = val;
+    // добавляем параграф в printBlock
+    printBlock.appendChild(pElement);
+}
+ 
+var printButton = document.search.print;
+printButton.addEventListener("click", printForm);
+</script>
+</body>
+</html>

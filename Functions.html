@@ -1,0 +1,109 @@
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>google.com</title>
+  </head>
+  <body>
+    <script>
+      function hello() {
+        console.log("Hello google.com");
+      }
+      // calling the function
+      hello();
+    </script>
+  </body>
+</html> -->
+<!-- Local functions
+JavaScript allows you to define local functions
+ - functions inside other functions. Local functions are visible only within the outer function in which they are defined. For example:
+function print(){
+     
+    printHello();
+    printHello();
+    printHello();
+ 
+    function printHello(){
+        console.log("Hello");
+    }
+}
+print();
+printHello();   // Uncaught ReferenceError: printHello is not defined - локальную функцию можно вызвать только из ее окружающей функции
+Here, inside the print function, a local function called printHello is defined,
+ which simply prints the string "Hello". And inside the print function,
+  we can call the local printHello function, but outside the surrounding function, the local function cannot be called.
+
+This example is quite simple and doesn't make much sense. However,
+ as a rule, local functions are defined for those actions that are used repeatedly
+  only within a single function and nowhere else. The disadvantages of local functions 
+  include the fact that they are created whenever an external function is called. -->
+
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>google.com</title>
+  </head>
+  <body>
+    <script>
+      function printPerson(person) {
+        console.log("Name:", person[0]);
+        console.log("Age:", person[1]);
+        console.log("Email:", person[2]);
+        console.log("=========================");
+      }
+      
+      const tom = ["Tom", 39, "tom@example.com"];
+      const bob = ["Bob", 43, "bob@example.com"];
+
+      printPerson(tom);
+      printPerson(bob);
+    </script>
+  </body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>google.com</title>
+  </head>
+  <body>
+    <script>
+      function getFibonachi(n) {
+        console.log(n);
+
+        if (n === 0) {
+          return 0;
+        }
+        if (n === 1) {
+          return 1;
+        } else {
+          return getFibonachi(n - 1) + getFibonachi(n - 2);
+        }
+      }
+      var result = getFibonachi(8); //21
+      console.log(result); // 21
+    </script>
+  </body>
+</html> -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>google.com</title>
+  </head>
+  <body>
+    <script>
+      function getFactorial(n) {
+        console.log(n);
+        if (n === 1) {
+          return 1;
+        } else {
+          return n * getFactorial(n - 1);
+        }
+      }
+      var result = getFactorial(4);
+      console.log(result); // 24
+    </script>
+  </body>
+</html>
